@@ -15,7 +15,6 @@ const Navigation = () => {
   }, [])
 
   const toggleNav = () => {
-    console.log(window.location.hash)
     setToggle(toggle => {
       return !toggle
     })
@@ -23,7 +22,7 @@ const Navigation = () => {
 
   const breadcrumb = toggle ? (
     <a
-      href={window.location.hash}
+      href={typeof window !== "undefined" && window.location.hash}
       className={styles.meanmenuReveal}
       onClick={toggleNav}
     >
