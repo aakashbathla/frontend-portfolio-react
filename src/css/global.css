@@ -1,0 +1,14 @@
+:root {
+  --primaryColor: #101325;
+  --secondaryColor: #1b1d39;
+  --fontPrimaryColor: #ffd15a;
+  --fontTertiaryColor: #393c4b;
+  --fontSecondaryColor: #ffffff;
+}
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #101325;
+}
