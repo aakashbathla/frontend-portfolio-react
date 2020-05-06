@@ -4,8 +4,9 @@ import { addHash, removeHash } from "./Utility"
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false)
+  let hashWindow = "#"
   useEffect(() => {
-    let hash = window ? window.location.hash : "#"
+    hashWindow = window ? window.location.hash : "#"
     addHash()
     window.addEventListener("hashchange", e => {
       removeHash()
@@ -68,7 +69,7 @@ const Navigation = () => {
               >
                 <div className={styles.meanBar}>
                   <a
-                    href={hash}
+                    href={hashWindow}
                     className={styles.meanmenuReveal}
                     onClick={toggleNav}
                   >
