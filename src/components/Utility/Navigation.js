@@ -31,7 +31,7 @@ const Navigation = () => {
   ) : (
     <>
       <a
-        href={window.location.hash}
+        href={typeof window !== "undefined" && window.location.hash}
         className={styles.meanmenuReveal}
         onClick={toggleNav}
       >
