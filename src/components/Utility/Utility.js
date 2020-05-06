@@ -5,15 +5,6 @@ export const addHash = () => {
     els.forEach(el => {
       el.classList.add("current")
     })
-    // if (els[0] && els[1]) {
-    //   els[0].classList.add("current")
-    //   els[1].classList.add("current")
-    //   setTimeout(() => {
-    //     if (els[2]) {
-    //       els[2].classList.add("current")
-    //     }
-    //   }, 0)
-    // }
   }
 }
 export const removeHash = () => {
