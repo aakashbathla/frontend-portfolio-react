@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react"
 import styles from "../../css/Navigation.module.css"
 import { addHash, removeHash } from "./Utility"
+import links from "../../constants/links"
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false)
-  let hashWindow = "#"
   useEffect(() => {
-    hashWindow = window ? window.location.hash : "#"
     addHash()
     window.addEventListener("hashchange", e => {
       removeHash()
@@ -14,17 +13,30 @@ const Navigation = () => {
     })
   }, [])
   const toggleNav = () => {
+    console.log(window.location.hash)
     setToggle(toggle => {
       return !toggle
     })
   }
   const breadcrumb = toggle ? (
-    "X"
+    <a
+      href={window.location.hash}
+      className={styles.meanmenuReveal}
+      onClick={toggleNav}
+    >
+      "X"
+    </a>
   ) : (
     <>
-      <span></span>
-      <span></span>
-      <span></span>
+      <a
+        href={window.location.hash}
+        className={styles.meanmenuReveal}
+        onClick={toggleNav}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </>
   )
   return (
@@ -43,24 +55,13 @@ const Navigation = () => {
               <div className="main-menu">
                 <nav className={`${styles.navbar} d-none d-md-block`}>
                   <ul>
-                    <li id="home">
-                      <a href="#home">Home</a>
-                    </li>
-                    <li id="about">
-                      <a href="#about">About</a>
-                    </li>
-                    <li id="skills">
-                      <a href="#skills">Skills</a>
-                    </li>
-                    <li id="projects">
-                      <a href="#projects">Projects</a>
-                    </li>
-                    <li id="blog">
-                      <a href="#blog">Blog</a>
-                    </li>
-                    <li id="contact">
-                      <a href="#contact">Contact</a>
-                    </li>
+                    {links.map((item, index) => {
+                      return (
+                        <li key={index} id={item.id}>
+                          <a href={item.path}>{item.text}</a>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </nav>
               </div>
@@ -68,37 +69,20 @@ const Navigation = () => {
                 className={`${styles.mobileMenu} ${styles.meanContainer} d-block d-md-none`}
               >
                 <div className={styles.meanBar}>
-                  <a
-                    href={hashWindow}
-                    className={styles.meanmenuReveal}
-                    onClick={toggleNav}
-                  >
-                    {breadcrumb}
-                  </a>
+                  {breadcrumb}
                   <nav
                     className={`${styles.meanNav} ${
                       toggle ? "d-block" : "d-none"
                     }`}
                   >
                     <ul>
-                      <li id="home">
-                        <a href="#home">Home</a>
-                      </li>
-                      <li id="about">
-                        <a href="#about">About</a>
-                      </li>
-                      <li id="skills">
-                        <a href="#skills">Skills</a>
-                      </li>
-                      <li id="projects">
-                        <a href="#projects">Projects</a>
-                      </li>
-                      <li id="blog">
-                        <a href="#blog">Blog</a>
-                      </li>
-                      <li id="contact">
-                        <a href="#contact">Contact</a>
-                      </li>
+                      {links.map((item, index) => {
+                        return (
+                          <li key={index} id={item.id}>
+                            <a href={item.path}>{item.text}</a>
+                          </li>
+                        )
+                      })}
                     </ul>
                   </nav>
                 </div>
