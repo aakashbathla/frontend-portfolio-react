@@ -12,3 +12,6 @@ body {
   padding: 0px;
   background-color: #101325;
 }
+ul li a.current {
+  color: #ffd15a !important;
+}

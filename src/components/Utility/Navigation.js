@@ -1,8 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "../../css/Navigation.module.css"
+import { addHash, removeHash } from "./Utility"
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false)
+  useEffect(() => {
+    addHash()
+    window.addEventListener("hashchange", e => {
+      removeHash()
+      addHash()
+    })
+  }, [])
   const toggleNav = () => {
     setToggle(toggle => {
       return !toggle
@@ -24,7 +32,7 @@ const Navigation = () => {
           <div className="row">
             <div className="col-xl-2 col-lg-3 col-md-3">
               <div className={styles.logoArea}>
-                <a href="index.html">
+                <a href="#home">
                   <img src="/logo2.png" alt="enventer" />
                 </a>
               </div>
@@ -59,7 +67,7 @@ const Navigation = () => {
               >
                 <div className={styles.meanBar}>
                   <a
-                    href="#nav"
+                    href={window.location.hash}
                     className={styles.meanmenuReveal}
                     onClick={toggleNav}
                   >

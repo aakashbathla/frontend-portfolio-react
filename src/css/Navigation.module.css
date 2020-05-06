@@ -19,6 +19,9 @@
   transition: 0.5s;
   padding-top: 45px;
 }
+.navbar ul li a:hover {
+  text-decoration: none;
+}
 .main-navigation {
   width: 100%;
   background-color: transparent;
