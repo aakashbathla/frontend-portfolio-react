@@ -67,7 +67,7 @@ const Navigation = () => {
               >
                 <div className={styles.meanBar}>
                   <a
-                    href={window.location.hash}
+                    href={window ? window.location.hash : "#"}
                     className={styles.meanmenuReveal}
                     onClick={toggleNav}
                   >
