@@ -5,6 +5,7 @@ import links from "../../constants/links"
 
 const Navigation = () => {
   const [toggle, setToggle] = useState(false)
+
   useEffect(() => {
     addHash()
     window.addEventListener("hashchange", e => {
@@ -12,19 +13,21 @@ const Navigation = () => {
       addHash()
     })
   }, [])
+
   const toggleNav = () => {
     console.log(window.location.hash)
     setToggle(toggle => {
       return !toggle
     })
   }
+
   const breadcrumb = toggle ? (
     <a
       href={window.location.hash}
       className={styles.meanmenuReveal}
       onClick={toggleNav}
     >
-      "X"
+      X
     </a>
   ) : (
     <>
@@ -39,6 +42,7 @@ const Navigation = () => {
       </a>
     </>
   )
+
   return (
     <header id="home">
       <div className={styles.mainNavigation}>
