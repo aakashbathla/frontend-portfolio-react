@@ -9,7 +9,7 @@ body {
 ul li a.current {
   color: var(--fontPrimaryColor) !important;
 }
-.header-content-area:before {
+/* .header-content-area:before {
   content: "";
   position: absolute;
   left: 0;
@@ -17,7 +17,7 @@ ul li a.current {
   background-color: rgba(33, 32, 71, 0.7);
   height: 100vh;
   width: 100%;
-}
+} */
 .intro-text {
   text-align: center;
   padding-top: 60px;
@@ -366,15 +366,6 @@ Website: www.enventer.com
 
 /*==================== 1. Default Theme CSS ===================*/
 
-html,
-body {
-  height: 100%;
-  font-family: "Titillium Web", sans-serif;
-  margin: 0px;
-  padding: 0px;
-  background-color: #101325;
-}
-
 ::-moz-selection {
   background: #ffffff;
   color: #212121;
@@ -714,35 +705,6 @@ ul {
     top: 0;
   }
 }
-
-/*2.3 header image*/
-.header-content-area {
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.header-content-area:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(33, 32, 71, 0.7);
-  height: 100vh;
-  width: 100%;
-}
-
 /*2.4 header text*/
 .intro-text {
   text-align: center;

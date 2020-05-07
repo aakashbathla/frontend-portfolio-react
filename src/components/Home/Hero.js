@@ -48,8 +48,8 @@ const Hero = () => {
                   {professionTitle}
                 </h1>
                 <p>{details}</p>
-                <div class="learnmore">
-                  <a href={work.link} class="skill-btn">
+                <div className="learnmore">
+                  <a href={work.link} className="skill-btn">
                     {work.text}
                   </a>
                 </div>
