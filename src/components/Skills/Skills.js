@@ -20,11 +20,6 @@ const getSkillsData = graphql`
     }
   }
 `
-const styles = {
-  width: {
-    width: "red",
-  },
-}
 
 const Skills = () => {
   const { skills } = useStaticQuery(getSkillsData)

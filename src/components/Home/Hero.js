@@ -60,7 +60,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="header-down-arrow">
-            <a href="/#about">
+            <a href="/#expertise">
               <IconContext.Provider value={{ color: "#FFD15A", size: "35px" }}>
                 <div>
                   <FaLongArrowAltDown />

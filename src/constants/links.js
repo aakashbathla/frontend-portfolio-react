@@ -10,7 +10,7 @@ export default [
     id: "about",
   },
   {
-    path: "#skills",
+    path: "#expertise",
     text: "Skills",
     id: "skills",
   },
