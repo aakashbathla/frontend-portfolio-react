@@ -1,6 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import StyledHero from "../Utility/StyledHero"
+import { FaLongArrowAltDown } from "react-icons/fa"
+import { IconContext } from "react-icons"
+
 const getHomeData = graphql`
   query {
     home: allContentfulPortfolio {
@@ -55,6 +58,15 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="header-down-arrow">
+            <a href="/#about">
+              <IconContext.Provider value={{ color: "#FFD15A", size: "35px" }}>
+                <div>
+                  <FaLongArrowAltDown />
+                </div>
+              </IconContext.Provider>
+            </a>
           </div>
         </div>
       </StyledHero>
