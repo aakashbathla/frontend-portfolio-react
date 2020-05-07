@@ -10,7 +10,7 @@
   position: relative;
 }
 .navbar ul li a {
-  color: #fff;
+  color: var(--fontSecondaryColor);
   display: inline-block;
   text-transform: capitalize;
   font-size: 22px;
@@ -67,7 +67,7 @@ a.meanmenu-reveal {
 
 .mean-container a.meanmenu-reveal {
   border: 1px solid transparent;
-  color: #fff;
+  color: var(--fontSecondaryColor);
   cursor: pointer;
   display: block;
   font-family: Arial, Helvetica, sans-serif;
@@ -85,7 +85,7 @@ a.meanmenu-reveal {
 }
 
 .mean-container a.meanmenu-reveal span {
-  background: #fff none repeat scroll 0 0;
+  background: var(--fontSecondaryColor) none repeat scroll 0 0;
   display: block;
   height: 4px;
   margin-top: 3px;
@@ -113,7 +113,7 @@ a.meanmenu-reveal {
 }
 
 .mean-container .mean-nav ul li a {
-  color: #fff;
+  color: var(--fontSecondaryColor);
   display: block;
   float: left;
   margin: 0;
@@ -212,12 +212,12 @@ a.meanmenu-reveal {
 }
 
 .transparent-header .mean-container a.meanmenu-reveal {
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid var(--fontSecondaryColor);
+  color: var(--fontSecondaryColor);
 }
 
 .transparent-header .mean-container a.meanmenu-reveal span {
-  background: #fff;
+  background: var(--fontSecondaryColor);
 }
 .mean-container .mean-nav {
   margin-top: 5px;

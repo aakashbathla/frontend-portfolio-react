@@ -2,8 +2,34 @@ import React, { useState, useEffect } from "react"
 import styles from "../../css/Navigation.module.css"
 import { addHash, removeHash } from "./Utility"
 import links from "../../constants/links"
+import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
+
+const getData = graphql`
+  query {
+    portfolio: allContentfulPortfolio {
+      nodes {
+        color {
+          primaryColor
+          secondaryColor
+          fontPrimaryColor
+          fontSecondaryColor
+          fontTertiaryColor
+        }
+      }
+    }
+  }
+`
 
 const Navigation = () => {
+  const { portfolio } = useStaticQuery(getData)
+  const {
+    primaryColor,
+    secondaryColor,
+    fontPrimaryColor,
+    fontSecondaryColor,
+    fontTertiaryColor,
+  } = portfolio.nodes[0].color
   const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
@@ -44,6 +70,21 @@ const Navigation = () => {
 
   return (
     <header id="home">
+      <Helmet
+        style={[
+          {
+            cssText: `
+                  :root {
+                    --primaryColor: ${primaryColor};
+                    --secondaryColor: ${secondaryColor};
+                    --fontPrimaryColor: ${fontPrimaryColor};
+                    --fontTertiaryColor: ${fontTertiaryColor};
+                    --fontSecondaryColor: ${fontSecondaryColor}; 
+                  }
+              `,
+          },
+        ]}
+      />
       <div className={styles.mainNavigation}>
         <div className="container">
           <div className="row">
