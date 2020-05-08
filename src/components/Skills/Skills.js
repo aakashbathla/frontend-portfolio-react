@@ -24,7 +24,6 @@ const getSkillsData = graphql`
 const Skills = () => {
   const { skills } = useStaticQuery(getSkillsData)
   const { title, subtitle, technolgies } = skills.nodes[0].skills
-  console.log(technolgies)
   return (
     <section id="expertise">
       <div className="expertise-area">

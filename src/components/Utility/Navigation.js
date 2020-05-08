@@ -4,7 +4,7 @@ import { addHash, removeHash } from "./Utility"
 import links from "../../constants/links"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import SmoothScroll from "smooth-scroll"
+import { Link } from "gatsby"
 
 const getData = graphql`
   query {
@@ -32,18 +32,25 @@ const Navigation = () => {
     fontTertiaryColor,
   } = portfolio.nodes[0].color
   const [toggle, setToggle] = useState(false)
-
+  const [activeClass, setActiveClass] = useState("")
   useEffect(() => {
     addHash()
     window.addEventListener("hashchange", e => {
       removeHash()
       addHash()
     })
-    // All animations will take exactly 500ms
-    var scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 1000,
-      speedAsDuration: true,
+    window.addEventListener("scroll", () => {
+      if (window.scrollY <= 50) {
+        setActiveClass("")
+      } else {
+        setActiveClass("main-navigation sticky")
+      }
     })
+    // All animations will take exactly 500ms
+    // var scroll = new SmoothScroll('a[href*="#"]', {
+    //   speed: 1000,
+    //   speedAsDuration: true,
+    // })
   }, [])
 
   const toggleNav = () => {
@@ -53,24 +60,24 @@ const Navigation = () => {
   }
 
   const breadcrumb = toggle ? (
-    <a
-      href={typeof window !== "undefined" && window.location.hash}
+    <Link
+      to={typeof window !== "undefined" && window.location.hash}
       className={styles.meanmenuReveal}
       onClick={toggleNav}
     >
       X
-    </a>
+    </Link>
   ) : (
     <>
-      <a
-        href={typeof window !== "undefined" && window.location.hash}
+      <Link
+        to={typeof window !== "undefined" && window.location.hash}
         className={styles.meanmenuReveal}
         onClick={toggleNav}
       >
         <span></span>
         <span></span>
         <span></span>
-      </a>
+      </Link>
     </>
   )
 
@@ -91,11 +98,11 @@ const Navigation = () => {
           },
         ]}
       />
-      <div className={styles.mainNavigation}>
+      <div className={`${styles.mainNavigation} ${activeClass}`}>
         <div className="container">
           <div className="row">
             <div className="col-xl-2 col-lg-3 col-md-3">
-              <div className={styles.logoArea}>
+              <div className={`${styles.logoArea} logo-area`}>
                 <a href="#home">
                   <img src="/logo2.png" alt="enventer" />
                 </a>
