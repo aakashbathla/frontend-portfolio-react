@@ -5,7 +5,7 @@ import links from "../../constants/links"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
-import SmoothScroll from "smooth-scroll"
+import SmoothScroll from "../../../node_modules/smoothscroll-polyfill/dist/smoothscroll"
 
 const getData = graphql`
   query {
