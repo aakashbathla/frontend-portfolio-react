@@ -5,7 +5,7 @@ export default [
     id: "home",
   },
   {
-    path: "#about",
+    path: "#aboutus",
     text: "About",
     id: "about",
   },

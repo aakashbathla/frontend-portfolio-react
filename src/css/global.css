@@ -604,7 +604,7 @@ ul {
 
 .progressbar-title {
   color: #ffd15a;
-  font-size: 35px;
+  font-size: 20px;
   margin: 0px 0 10px;
   text-transform: uppercase;
 }
@@ -799,7 +799,7 @@ ul {
   transform: translate(-50%);
 }
 
-.experience-icon i {
+.experience-icon svg {
   color: #ffd15a;
   border: 1px solid #ffd15a;
   width: 50px;
@@ -809,10 +809,11 @@ ul {
   line-height: 48px;
   background-color: #101325;
   font-size: 25px;
+  padding: 8px;
 }
 
 /*7.3 experience box*/
-.experience-line ul li {
+.experience-line > ul > li {
   width: 50%;
   padding: 0 40px 0px 40px;
   position: relative;
@@ -822,13 +823,13 @@ ul {
   margin-top: 75px;
 }
 
-.experience-line ul li:nth-child(odd) {
+.experience-line > ul > li:nth-child(odd) {
   float: left;
   text-align: right;
   clear: both;
 }
 
-.experience-line ul li:nth-child(odd):before {
+.experience-line > ul > li:nth-child(odd):before {
   content: "";
   position: absolute;
   width: 15px;
@@ -843,21 +844,21 @@ ul {
   transform: translateY(-50%);
 }
 
-.experience-line ul li:nth-child(odd) .experience-time {
+.experience-line > ul > li:nth-child(odd) .experience-time {
   position: absolute;
-  right: -200px;
+  right: -220px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.experience-line ul li:nth-child(even) {
+.experience-line > ul > li:nth-child(even) {
   float: right;
   text-align: left;
   clear: both;
 }
 
-.experience-line ul li:nth-child(even):before {
+.experience-line > ul > li:nth-child(even):before {
   content: "";
   position: absolute;
   width: 15px;
@@ -872,14 +873,19 @@ ul {
   transform: translateY(-50%);
 }
 
-.experience-line ul li:nth-child(2n) .experience-time {
+.experience-line > ul > li:nth-child(2n) .experience-time {
   position: absolute;
   left: -39%;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 175px;
+  width: 200px;
   text-align: right;
+}
+
+.company-details li {
+  text-align: left;
+  list-style: circle;
 }
 
 /*7.4 experience content*/
@@ -893,6 +899,7 @@ ul {
   width: 100%;
   padding: 30px;
   border-radius: 10px;
+  text-align: left;
 }
 
 .experience-content:nth-child(1):before {

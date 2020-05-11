@@ -5,6 +5,7 @@ import links from "../../constants/links"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
+import SmoothScroll from "smooth-scroll"
 
 const getData = graphql`
   query {
@@ -47,10 +48,17 @@ const Navigation = () => {
       }
     })
     // All animations will take exactly 500ms
-    // var scroll = new SmoothScroll('a[href*="#"]', {
-    //   speed: 1000,
-    //   speedAsDuration: true,
-    // })
+    var scroll = new SmoothScroll(
+      'a[href*="#"]',
+      {
+        speed: 1000,
+        speedAsDuration: true,
+      },
+      () => {
+        removeHash()
+        addHash()
+      }
+    )
   }, [])
 
   const toggleNav = () => {
