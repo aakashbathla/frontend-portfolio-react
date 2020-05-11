@@ -55,11 +55,11 @@ const About = () => {
                         >
                           <h4>{exp.company}</h4>
                           <span>{exp.profile}</span>
-                          <p
+                          <div
                             dangerouslySetInnerHTML={createMarkup(
                               exp.description
                             )}
-                          ></p>
+                          ></div>
                         </div>
                         <div className="experience-time">
                           <h4>{exp.range}</h4>
