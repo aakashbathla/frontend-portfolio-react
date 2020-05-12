@@ -25,7 +25,7 @@ export default [
     id: "blog",
   },
   {
-    path: "#contact",
+    path: "#contactus",
     text: "Contact",
     id: "contact",
   },
