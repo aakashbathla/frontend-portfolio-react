@@ -5,6 +5,7 @@ import About from "../components/About/About"
 import Skills from "../components/Skills/Skills"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../css/global.css"
+import Footer from "../components/Footer/Footer"
 
 export default () => (
   <div>
@@ -12,5 +13,6 @@ export default () => (
     <Home />
     <About />
     <Skills />
+    <Footer />
   </div>
 )

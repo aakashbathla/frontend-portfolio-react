@@ -16,3 +16,6 @@ export const removeHash = () => {
     el.classList.remove("current")
   })
 }
+export const createMarkup = description => {
+  return { __html: description }
+}
