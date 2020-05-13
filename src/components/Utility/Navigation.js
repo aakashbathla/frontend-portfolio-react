@@ -107,9 +107,9 @@ const Navigation = () => {
           <div className="row">
             <div className="col-xl-2 col-lg-3 col-md-3">
               <div className={`${styles.logoArea} logo-area`}>
-                <a href="#home">
+                <Link tp="/#home">
                   <img src="/logo2.png" alt="enventer" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-xl-10 col-lg-9 col-md-9">
