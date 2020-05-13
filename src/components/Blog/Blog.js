@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import BlogList from "./BlogList"
 
 const getData = graphql`
@@ -56,9 +56,9 @@ const Blog = () => {
             })}
           </div>
           <div className="learnmore view-all-blogs">
-            <a href="/blogs" className="skill-btn">
+            <Link to="/blogs" className="skill-btn">
               View All
-            </a>
+            </Link>
           </div>
         </div>
       </div>

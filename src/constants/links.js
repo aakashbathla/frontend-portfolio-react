@@ -22,7 +22,7 @@ export default [
   {
     path: "#blog",
     text: "Blog",
-    id: "blog",
+    id: "blogs",
   },
   {
     path: "#contactus",
