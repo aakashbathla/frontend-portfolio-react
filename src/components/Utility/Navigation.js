@@ -119,15 +119,7 @@ const Navigation = () => {
                     {links.map((item, index) => {
                       return (
                         <li key={index} id={item.id}>
-                          <a
-                            href={
-                              typeof window !== "undefined"
-                                ? window.location.origin + "/" + item.path
-                                : item.path
-                            }
-                          >
-                            {item.text}
-                          </a>
+                          <Link to={item.path}>{item.text}</Link>
                         </li>
                       )
                     })}
@@ -148,16 +140,9 @@ const Navigation = () => {
                       {links.map((item, index) => {
                         return (
                           <li key={index} id={item.id}>
-                            <a
-                              href={
-                                typeof window !== "undefined"
-                                  ? window.location.origin + "/" + item.path
-                                  : item.path
-                              }
-                              onClick={toggleNav}
-                            >
+                            <Link to={item.path} onClick={toggleNav}>
                               {item.text}
-                            </a>
+                            </Link>
                           </li>
                         )
                       })}
