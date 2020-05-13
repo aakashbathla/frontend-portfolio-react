@@ -121,8 +121,9 @@ const Navigation = () => {
                         <li key={index} id={item.id}>
                           <a
                             href={
-                              typeof window !== "undefined" &&
-                              window.location.origin + "/" + item.path
+                              typeof window !== "undefined"
+                                ? window.location.origin + "/" + item.path
+                                : item.path
                             }
                           >
                             {item.text}
@@ -149,8 +150,9 @@ const Navigation = () => {
                           <li key={index} id={item.id}>
                             <a
                               href={
-                                typeof window !== "undefined" &&
-                                window.location.origin + "/" + item.path
+                                typeof window !== "undefined"
+                                  ? window.location.origin + "/" + item.path
+                                  : item.path
                               }
                               onClick={toggleNav}
                             >
