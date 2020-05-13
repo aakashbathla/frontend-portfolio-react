@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 const BlogList = props => {
   return (
     <div className="col-xl-4 col-lg-4 col-md-6">
@@ -11,7 +12,7 @@ const BlogList = props => {
           <h3>{props.blogDetail.title}</h3>
           <span>{props.blogDetail.genre}</span>
           <p>{props.blogDetail.description.description}</p>
-          <a href="#">Read More</a>
+          <Link to={`/blogs/${props.blogDetail.slug}`}>Read More</Link>
         </div>
       </div>
     </div>

@@ -1787,7 +1787,7 @@ ul {
   color: white;
   padding: 40px 0;
 }
-.footer.group a {
+.footer.group a, .single-blog-title{
   color: #ffd15a;
 }
 .footer.group a:hover {
@@ -1818,4 +1818,10 @@ ul {
 }
 .blogs-page {
   padding-top: 100px;
+}
+.single-blog-image {
+  width: 100%;
+}
+.single-blog-page {
+  color: white;
 }

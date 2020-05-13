@@ -31,6 +31,14 @@ const blogs = ({ data }) => {
       <section>
         <div className="blog-area blogs-page">
           <div className="container">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="section-heading-3 mb-55">
+                  <h4>Read All</h4>
+                  <h2>Blogs</h2>
+                </div>
+              </div>
+            </div>
             <div className="row blog-post-area">
               {data.blogs.nodes.map((blogDetail, index) => {
                 return <BlogList key={index} blogDetail={blogDetail} />
