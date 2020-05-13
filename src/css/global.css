@@ -1812,3 +1812,7 @@ ul {
 .footer.group .footer-menu span {
   text-transform: lowercase;
 }
+.view-all-blogs {
+  width: 100%;
+  text-align: center;
+}
