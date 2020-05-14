@@ -17,7 +17,7 @@ export default [
   {
     path: "#projects",
     text: "Projects",
-    id: "projects",
+    id: "project",
   },
   {
     path: "#blog",

@@ -132,7 +132,7 @@ a {
 }
 
 a:hover {
-  color: #6b6fff;
+  color: #ffd15a;
   text-decoration: none;
 }
 
@@ -1189,7 +1189,7 @@ ul {
 
 /*=========10. Blog Area CSS==========*/
 .blog-area {
-  padding: 0 0 170px 0;
+  padding: 170px 0 170px 0;
   position: relative;
 }
 
@@ -1787,7 +1787,8 @@ ul {
   color: white;
   padding: 40px 0;
 }
-.footer.group a, .single-blog-title{
+.footer.group a,
+.single-blog-title {
   color: #ffd15a;
 }
 .footer.group a:hover {
